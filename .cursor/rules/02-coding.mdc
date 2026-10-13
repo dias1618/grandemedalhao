@@ -1,0 +1,50 @@
+---
+description: Convenções de código Godot para a Vertical Slice, incluindo domínio, testes e idioma
+alwaysApply: true
+---
+
+# Coding Rules
+
+## Stack
+
+Godot 4.7 and GDScript, as decided in `docs/decisions/ADR/ADR-001-godot-stack-e-greenfield.md`.
+
+Do not introduce another engine, another language, or a test plugin.
+
+## Language
+
+Code identifiers are English.
+
+Game-design documents stay in Portuguese. Do not translate them while implementing a task.
+
+## Layers
+
+- `domain/` holds rules and state. It must not extend `Node`, read the `Input` singleton, load scenes, or depend on `presentation/` or `infrastructure/`. `Vector2` and `StringName` are allowed.
+- `application/` coordinates use cases and may depend on `domain/`.
+- `presentation/` owns scenes, keyboard mapping, camera, and physics bodies.
+- `infrastructure/` owns files and resource loading.
+
+The legacy tree (`scripts/`, `autoload/game_manager.gd`, village, inventory, medallion) is not a pattern to copy. Do not extend it unless the current Implementation Unit explicitly allows that path.
+
+## Domain tests
+
+Place behavior tests in `tests/domain/<subject>_test.gd`.
+
+Each test script extends `RefCounted` and implements `run() -> bool`. Return `false` when an assertion fails. Do not require a scene tree.
+
+Run:
+
+```text
+python3 tools/harness/gate.py IU-XXX
+```
+
+That command checks the Implementation Unit contract and then runs the validation commands declared in the unit, including:
+
+```text
+godot --headless --path . --import --quit
+godot --headless --path . -s res://tests/run_domain_tests.gd
+```
+
+Use the `GODOT` environment variable when the binary has another name.
+
+A task is not `VALIDATED` until `gate.py` exits with status 0.

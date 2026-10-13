@@ -1,0 +1,40 @@
+# Git Rules
+
+## Scope
+
+A task should produce a coherent set of changes.
+
+Avoid mixing:
+
+- feature implementation;
+- unrelated refactoring;
+- formatting;
+- dependency upgrades.
+
+## Commit
+
+When commits are requested, prefer semantic commits:
+
+feat(...)
+fix(...)
+test(...)
+refactor(...)
+docs(...)
+chore(...)
+
+## Do not
+
+Do not:
+
+- rewrite unrelated history;
+- reset user work;
+- delete changes you did not create;
+- modify unrelated files without reason.
+
+## User changes
+
+Treat existing uncommitted user changes as protected.
+
+Do not overwrite them.
+
+Before making destructive changes, stop and report.

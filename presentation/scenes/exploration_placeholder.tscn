@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://explorationplaceholder"]
+
+[node name="ExplorationPlaceholder" type="Node2D"]
+
+[node name="Ground" type="Polygon2D" parent="."]
+color = Color(0.08, 0.2, 0.12, 1)
+polygon = PackedVector2Array(-1600, -1200, 1600, -1200, 1600, 1200, -1600, 1200)
+
+[node name="MapBounds" type="Polygon2D" parent="."]
+color = Color(0.22, 0.55, 0.3, 1)
+polygon = PackedVector2Array(-480, -320, 480, -320, 480, 320, -480, 320)
+
+[node name="Wall" type="Polygon2D" parent="."]
+color = Color(0.55, 0.54, 0.5, 1)
+polygon = PackedVector2Array(180, -140, 220, -140, 220, 140, 180, 140)
+
+[node name="Prop" type="Polygon2D" parent="."]
+color = Color(0.62, 0.38, 0.16, 1)
+polygon = PackedVector2Array(-220, 60, -160, 60, -160, 120, -220, 120)
+
+[node name="Band" type="Polygon2D" parent="Prop"]
+color = Color(0.36, 0.2, 0.08, 1)
+polygon = PackedVector2Array(-212, 86, -168, 86, -168, 98, -212, 98)
+
+[node name="PlayerMarker" type="Node2D" parent="."]
+
+[node name="Body" type="Polygon2D" parent="PlayerMarker"]
+color = Color(0.9, 0.22, 0.16, 1)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+
+[node name="Camera2D" type="Camera2D" parent="PlayerMarker"]
+zoom = Vector2(1, 1)

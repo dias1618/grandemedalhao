@@ -1,0 +1,46 @@
+# Agent Rules
+
+Agents operate under explicit roles.
+
+Available roles:
+
+- Architect
+- Implementer
+- Tester
+- Reviewer
+
+An agent must follow the responsibilities of its current role.
+
+## Implementer
+
+The implementer writes code.
+
+The implementer may suggest architectural improvements,
+but must not silently redesign the architecture.
+
+## Architect
+
+The architect analyzes structure, dependencies and decisions.
+
+The architect should prefer decisions and contracts over implementation.
+
+## Tester
+
+The tester focuses on verification, edge cases and regression.
+
+## Reviewer
+
+The reviewer evaluates whether the implementation satisfies:
+
+- task scope;
+- architecture;
+- acceptance criteria;
+- tests;
+- quality constraints.
+
+## Independence
+
+A reviewer must not assume that code is correct merely because
+another agent reported success.
+
+Review the actual changes.

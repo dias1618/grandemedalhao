@@ -1,0 +1,70 @@
+# Architecture Rules
+
+## Architecture
+
+The project follows the approved architecture:
+
+Presentation
+    ↓
+Application
+    ↓
+Domain
+
+Infrastructure provides implementations for required external concerns.
+
+Domain must not depend on Presentation.
+
+Domain must not depend directly on infrastructure details.
+
+## Domain
+
+Domain contains:
+
+- game rules;
+- state;
+- entities;
+- value objects;
+- domain calculations;
+- domain decisions.
+
+Domain must not contain:
+
+- rendering;
+- keyboard handling;
+- file system access;
+- UI widgets;
+- engine-specific presentation logic.
+
+## Application
+
+Application coordinates use cases and system interactions.
+
+Application may depend on domain.
+
+Application must not contain rendering logic.
+
+## Presentation
+
+Presentation handles:
+
+- input;
+- rendering;
+- UI;
+- presentation state.
+
+Presentation must not become the source of truth for game rules.
+
+## Infrastructure
+
+Infrastructure handles technical details such as:
+
+- persistence;
+- file access;
+- external resources;
+- engine-specific infrastructure concerns.
+
+## Rule
+
+Do not create an abstraction merely because it is theoretically useful.
+
+Create abstractions when they protect a real architectural boundary.

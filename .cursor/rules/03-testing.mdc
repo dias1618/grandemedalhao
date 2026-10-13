@@ -1,0 +1,51 @@
+# Testing Rules
+
+## General
+
+Tests must verify behavior, not implementation details unnecessarily.
+
+## Domain
+
+Domain rules should be testable without:
+
+- rendering;
+- game engine;
+- file system;
+- network;
+- UI.
+
+## Determinism
+
+Tests must prefer deterministic inputs.
+
+Randomized game behavior must provide a way to control randomness
+when deterministic testing is required.
+
+## Regression
+
+Existing tests must continue to pass.
+
+Do not modify an existing test simply because the implementation
+currently fails it.
+
+First determine whether:
+
+- the implementation is wrong;
+- the test is outdated;
+- the specification changed.
+
+## Required validation
+
+A task that introduces behavior should include appropriate tests.
+
+At minimum verify:
+
+- happy path;
+- important boundary;
+- invalid state where applicable.
+
+## Integration
+
+Integration tests should validate interaction between components.
+
+Do not replace all unit tests with integration tests.
