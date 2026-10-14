@@ -2,7 +2,7 @@
 
 ## Current Milestone
 
-M02 — First Interaction
+M04 — Combat Prototype
 
 ## Completed
 
@@ -15,6 +15,18 @@ M02 — First Interaction
 - IU-007 — Input
 - IU-008 — Movement
 - IU-009 — Collision
+- IU-010 — Interaction
+- IU-011 — Dialogue
+- IU-012 — DialogueController
+- IU-013 — Dialogue view
+- IU-014 — Choice
+- IU-015 — MissionState
+- IU-016 — Old man choice
+- IU-017 — Choice view
+- IU-018 — Combatant
+- IU-019 — Combat round
+- IU-020 — Combat session
+- IU-021 — Combat view
 
 ## In Progress
 
@@ -22,7 +34,7 @@ None
 
 ## Next
 
-IU-010 — Interaction
+M05 — First Complete Route. Contratos ainda não escritos.
 
 ## Blocked
 
@@ -34,7 +46,7 @@ None
 
 ## Executable Units
 
-M01 contracts live in `docs/technical/implementation-units/`. Validate a unit with `python3 tools/harness/gate.py IU-XXX`.
+M01 through M04 contracts live in `docs/technical/implementation-units/`. Validate a unit with `python3 tools/harness/gate.py IU-XXX`.
 
 ## Known Technical Debt
 

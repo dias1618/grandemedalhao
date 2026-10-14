@@ -10,7 +10,7 @@ Dialogue view
 
 ## Status
 
-READY
+DONE
 
 ## Type
 

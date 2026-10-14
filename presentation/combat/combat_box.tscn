@@ -1,0 +1,126 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://presentation/combat/combat_box.gd" id="1_box"]
+
+[node name="CombatBox" type="CanvasLayer"]
+layer = 22
+script = ExtResource("1_box")
+
+[node name="Root" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -360.0
+offset_right = -24.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="Background" type="ColorRect" parent="Root"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.09, 0.06, 0.05, 0.94)
+
+[node name="Margin" type="MarginContainer" parent="Root"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 12
+
+[node name="Column" type="VBoxContainer" parent="Root/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="PlayerLine" type="Label" parent="Root/Margin/Column"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.95, 0.93, 0.88, 1)
+theme_override_font_sizes/font_size = 20
+text = ""
+
+[node name="PirateLine" type="Label" parent="Root/Margin/Column"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.95, 0.93, 0.88, 1)
+theme_override_font_sizes/font_size = 20
+text = ""
+
+[node name="Outcome" type="Label" parent="Root/Margin/Column"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.95, 0.86, 0.62, 1)
+theme_override_font_sizes/font_size = 20
+text = ""
+
+[node name="AttackRow" type="HBoxContainer" parent="Root/Margin/Column"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Marker" type="Label" parent="Root/Margin/Column/AttackRow"]
+custom_minimum_size = Vector2(24, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.98, 0.9, 0.55, 1)
+theme_override_font_sizes/font_size = 20
+text = ""
+
+[node name="AttackLabel" type="Label" parent="Root/Margin/Column/AttackRow"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.98, 0.9, 0.55, 1)
+theme_override_font_sizes/font_size = 20
+text = "Attack"
+
+[node name="DefendRow" type="HBoxContainer" parent="Root/Margin/Column"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Marker" type="Label" parent="Root/Margin/Column/DefendRow"]
+custom_minimum_size = Vector2(24, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.62, 0.58, 0.52, 1)
+theme_override_font_sizes/font_size = 20
+text = ""
+
+[node name="DefendLabel" type="Label" parent="Root/Margin/Column/DefendRow"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.62, 0.58, 0.52, 1)
+theme_override_font_sizes/font_size = 20
+text = "Defend"
+
+[node name="FleeRow" type="HBoxContainer" parent="Root/Margin/Column"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Marker" type="Label" parent="Root/Margin/Column/FleeRow"]
+custom_minimum_size = Vector2(24, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.62, 0.58, 0.52, 1)
+theme_override_font_sizes/font_size = 20
+text = ""
+
+[node name="FleeLabel" type="Label" parent="Root/Margin/Column/FleeRow"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.62, 0.58, 0.52, 1)
+theme_override_font_sizes/font_size = 20
+text = "Flee"

@@ -1283,14 +1283,24 @@ IU-012  DialogueController
 IU-013  Dialogue view
 ```
 
-A escolha sim/não não é a IU-013. Ela pertence ao M03 e só recebe número quando esse marco for planejado. O contrato em `docs/technical/implementation-units/IU-013-dialogue-view.md` prevalece sobre este rascunho.
+A escolha sim/não não é a IU-013. O contrato em `docs/technical/implementation-units/IU-013-dialogue-view.md` prevalece sobre este rascunho.
 
-E somente então:
+O M03 fica nestes contratos, que prevalecem sobre a lista antiga:
 
 ```text
-IU-014  Event
+IU-014  Choice
 IU-015  MissionState
-IU-016  Mission transitions
+IU-016  Old man choice
+IU-017  Choice view
+```
+
+O M04 fica nestes contratos, que prevalecem sobre o diagrama do marco:
+
+```text
+IU-018  Combatant
+IU-019  Combat round
+IU-020  Combat session
+IU-021  Combat view
 ```
 
 Isso produz uma progressão muito mais segura.

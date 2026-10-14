@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://barplaceholder"]
+
+[node name="BarPlaceholder" type="Node2D"]
+
+[node name="Ground" type="Polygon2D" parent="."]
+color = Color(0.28, 0.16, 0.1, 1)
+polygon = PackedVector2Array(-1600, -1200, 1600, -1200, 1600, 1200, -1600, 1200)
+
+[node name="MapBounds" type="Polygon2D" parent="."]
+color = Color(0.45, 0.28, 0.16, 1)
+polygon = PackedVector2Array(-480, -320, 480, -320, 480, 320, -480, 320)
+
+[node name="OldManMarker" type="Polygon2D" parent="."]
+position = Vector2(160, 80)
+color = Color(0.78, 0.72, 0.58, 1)
+polygon = PackedVector2Array(-16, -20, 16, -20, 16, 20, -16, 20)
+
+[node name="PlayerMarker" type="Node2D" parent="."]
+
+[node name="Body" type="Polygon2D" parent="PlayerMarker"]
+color = Color(0.9, 0.22, 0.16, 1)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+
+[node name="Camera2D" type="Camera2D" parent="PlayerMarker"]
+zoom = Vector2(1, 1)
